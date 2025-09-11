@@ -1,0 +1,95 @@
+🔹 İlkel (Primitive) Veri Tipleri
+
+Bellekte doğrudan değeri tutarlar.
+
+Daha hızlıdırlar çünkü ek bir nesne (object) oluşturmadan direkt RAM’de saklanır.
+
+stack üzerinde saklanır (bazı durumlarda register optimizasyonu da olur).
+
+Küçük harfle yazılırlar.
+
+Örnekler:
+
+int x = 10;  
+double pi = 3.14;  
+boolean flag = true;
+
+🔹 Sarmalayıcı (Wrapper) Sınıflar
+
+Her ilkel tipin bir sarmalayıcı sınıfı vardır.
+
+Bu sınıflar java.lang paketinde tanımlıdır.
+
+İlkel tipleri nesne (object) haline getirirler.
+
+Büyük harfle başlarlar.
+
+Örnekler:
+
+Integer y = 10;  
+Double d = 3.14;  
+Boolean b = true;
+
+Primitive ↔ Wrapper Eşleştirmesi:
+
+byte → Byte
+
+short → Short
+
+int → Integer
+
+long → Long
+
+float → Float
+
+double → Double
+
+char → Character
+
+boolean → Boolean
+
+🔹 Farklar
+Özellik	İlkel Tip	Sarmalayıcı Tip
+Bellek	Daha az yer kaplar	Daha fazla (nesne overhead’i var)
+Performans	Daha hızlı	Daha yavaş
+Null olabilir mi?	❌ Hayır (varsayılan değer vardır, int=0 gibi)	✅ Evet (null atanabilir)
+Koleksiyonlarda kullanma	❌ Kullanılamaz	✅ Nesne oldukları için kullanılabilir
+Metotlar	❌ Yok	✅ Sayısal işlemler, dönüşümler için hazır metotlar var
+🔹 Nerelerde Kullanıyoruz?
+
+Koleksiyonlar (Collections API)
+
+Java koleksiyonları (ArrayList, HashMap vb.) sadece nesne tutar.
+
+İlkel tipleri direkt koyamazsın, o yüzden wrapper kullanılır.
+
+ArrayList<Integer> list = new ArrayList<>();
+list.add(10); // Autoboxing: int → Integer
+
+
+Metotların nesne parametreleri gerektiğinde
+
+void printNumber(Integer x) {
+    System.out.println(x);
+}
+printNumber(5); // Autoboxing ile int → Integer dönüşür
+
+
+Null değer ihtiyacı olduğunda
+
+Primitive tipler null olamaz, ama wrapper olabilir.
+
+Integer age = null; // Bir veritabanından yaş bilgisi gelmeyebilir
+
+
+Yardımcı metotlar kullanmak için
+
+int max = Integer.max(10, 20);
+double d = Double.parseDouble("3.14");
+
+
+✅ Özet:
+
+Primitive → performans için, temel hesaplamalarda.
+
+Wrapper → nesne gerekliyse (koleksiyonlar, null değer, metotlar)

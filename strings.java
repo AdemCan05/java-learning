@@ -1,29 +1,27 @@
-// String oluşturmanın iki yolu vardır: 
-// 1. Çift tırnak kullanarak 
-// 2. new anahtar kelimesi ile
-//
-// Çift tırnak kullanarak oluşturulan Stringler daha yaygın ve okunması daha kolaydır.
-// new anahtar kelimesi ile oluşturulan Stringler ise daha az yaygındır. 
-// Genellikle ne olursa olsun yeni bir String nesnesi oluşturmak istediğinizde kullanılır.
+// Strings in Java
+// This example demonstrates how to create, manipulate, and compare strings.
 
 import java.util.Arrays;
 
 public class strings {
     public static void main(String[] args) {
         
-        // ---- String oluşturma örnekleri ----
-        // String name = "Adem Can";                // çift tırnak ile
-        // String name = new String("Adem Can");    // new anahtar kelimesi ile
+        // ---- Creating Strings ----
+        // Two ways to create strings:
+        // 1. Using double quotes (most common)
+        // 2. Using the 'new' keyword (less common, used when you want a new object)
+        // String name = "Adem Can";                // using double quotes
+        // String name = new String("Adem Can");    // using 'new' keyword
 
         String name = "Adem Can Demirci";
         String upperName = name.toUpperCase();
 
-        // ---- String.format() örneği ----
+        // ---- String.format() example ----
         // int age = 20;
         // String helloName = String.format("Hello %s! You are %d years old.", name, age);
         // System.out.println(helloName);
 
-        // ---- Boş olup olmadığını kontrol etme ----
+        // ---- Check if string is empty ----
         /*
         if (name.isEmpty()) {
             System.out.println("Name is empty");
@@ -32,50 +30,49 @@ public class strings {
         }
         */
 
-        // ---- String parçalama (split) ve birleştirme ----
+        // ---- Splitting and joining strings ----
         
-        // Boşluklara göre ayırma
+        // Split by spaces
         System.out.println(Arrays.toString(name.split(" "))); 
-        // Çıktı: [Adem, Can, Demirci]
+        // Output: [Adem, Can, Demirci]
 
-        // Her karakteri ayırma
+        // Split into individual characters
         String[] sub = name.split("");  
         
-        // Tekrar birleştirme (join)
+        // Join characters back into a string
         String joined = String.join("", sub);  
         System.out.println(joined); 
-        // Çıktı: Adem Can Demirci
+        // Output: Adem Can Demirci
 
-        // Büyük harfe çevirme
+        // Convert to uppercase
         System.out.println(name.toUpperCase());
-        // Çıktı: ADEM CAN DEMİRCİ
+        // Output: ADEM CAN DEMIRCI
 
-        // Küçük harfe çevirme
+        // Convert to lowercase
         System.out.println(name.toLowerCase());
-        // Çıktı: adem can demirci
+        // Output: adem can demirci
 
-        // Dizi karşılaştırma (Dizeler referans türü olduğundan, bunları operatör kullanarak karşılaştıramazsınız)
-        // equals() metodu büyük/küçük harf duyarlı karşılaştırma yapar
+        // ---- Comparing strings ----
+        // Strings are reference types, so you can't use '==' to compare content
+        // equals() method is case-sensitive
         System.out.println(name.equals(upperName)); // false
-        // equalsIgnoreCase() metodu ise büyük/küçük harf duyarsız karşılaştırma yapar
+        // equalsIgnoreCase() method ignores case
         System.out.println(name.equalsIgnoreCase(upperName)); // true
 
-        // replace() metodu ile değiştirme
+        // ---- Replacing substrings ----
         String Javabook = "Hello, World! Welcome to Java. Java is fun but sometimes tricky. I prefer Java over other languages.";
-        System.out.println(String.format("Begining: %s", Javabook));
-        // Her "Java" kelimesini "Python" ile değiştir
+        System.out.println(String.format("Beginning: %s", Javabook));
+        // Replace every occurrence of "Java" with "Python"
         String Pythonbook = Javabook.replace("Java", "Python"); 
         System.out.println(String.format("After replace: %s", Pythonbook));
 
-        // Alt dize bulma (contains)
+        // ---- Searching for substrings ----
         String flowers = "Roses are red, violets are blue.";
         if (flowers.contains("red")) {
-            // 0'dan başla, 14'e kadar (14 dahil değil)
-            System.out.println("The word 'red' is found. "); 
-            // Çıktı: Roses are red
-        }else{
+            System.out.println("The word 'red' is found."); 
+            // Output: The word 'red' is found.
+        } else {
             System.out.println("The word 'red' is not found.");
         }
-
     }   
 }

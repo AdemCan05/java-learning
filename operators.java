@@ -1,5 +1,5 @@
-// Java'da Operatörler
-// Bu örnekte aritmetik, karşılaştırma ve mantıksal operatörlerin nasıl kullanıldığını göreceksiniz.
+// Operators in Java
+// This example demonstrates how to use arithmetic, comparison, and logical operators.
 
 public class operators {
     public static void main(String[] args) {
@@ -8,26 +8,26 @@ public class operators {
         char smallA = 'a';
         char capitalA = 'A';
 
-        // ---- Aritmetik Operatörler ----
-        // int sum = num1 + num2;            // toplama
-        // int difference = num1 - num2;     // çıkarma
-        // int product = num1 * num2;        // çarpma
-        // float quotient = (float) num1 / num2; // bölme (float cast edilerek)
-        // int remainder = num1 % num2;      // mod (kalan)
+        // ---- Arithmetic Operators ----
+        // int sum = num1 + num2;            // addition
+        // int difference = num1 - num2;     // subtraction
+        // int product = num1 * num2;        // multiplication
+        // float quotient = (float) num1 / num2; // division (cast to float)
+        // int remainder = num1 % num2;      // modulus (remainder)
 
-        // ---- Karşılaştırma Operatörleri ----
-        // System.out.println(num1 == num2);  // eşit mi?  -> false
-        // System.out.println(num1 != num2);  // eşit değil mi? -> true
-        // System.out.println(num1 > num2);   // büyük mü? -> true
-        // System.out.println(num1 < num2);   // küçük mü? -> false
-        // System.out.println(num1 >= num2);  // büyük veya eşit mi? -> true
-        // System.out.println(num1 <= num2);  // küçük veya eşit mi? -> false
+        // ---- Comparison Operators ----
+        // System.out.println(num1 == num2);  // equal? -> false
+        // System.out.println(num1 != num2);  // not equal? -> true
+        // System.out.println(num1 > num2);   // greater than? -> true
+        // System.out.println(num1 < num2);   // less than? -> false
+        // System.out.println(num1 >= num2);  // greater than or equal? -> true
+        // System.out.println(num1 <= num2);  // less than or equal? -> false
 
-        // ---- Karakter Karşılaştırması ----
+        // ---- Character Comparison ----
         System.out.println(smallA > capitalA); 
-        // 'a' (97) > 'A' (65) olduğu için sonuç: true
+        // 'a' (97) > 'A' (65), so the result is: true
 
-        // ---- Mantıksal Operatörler ----
+        // ---- Logical Operators ----
         System.out.println(num1 > 6 && num2 < 10);  
         // true && true → true
 

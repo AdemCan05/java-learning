@@ -8,16 +8,16 @@ public class variableTransform {
         // int -> float
         /*
         int i_money = 100;
-        float d_money = i_money; 
-        System.out.println("int to float: " + d_money); // 100.0
+        float f_money = i_money; 
+        System.out.println("int to float: " + f_money); // 100.0
         */
 
         // ---- Manual Conversion (Narrowing Casting) ----
         // Large type -> Small type (must be done manually)
         // float -> int
         /*
-        float d_money = 100.99f;
-        int i_money = (int) d_money; // decimal part is lost
+        float f_money = 100.99f;
+        int i_money = (int) f_money; // decimal part is lost
         System.out.println("float to int: " + i_money); // 100
         */
 

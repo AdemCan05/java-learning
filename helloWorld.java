@@ -1,7 +1,7 @@
 // Basic "Hello, World!" program in Java
 // This program demonstrates the simplest Java program structure.
 
-public class helloWorld { // Class name should start with an uppercase letter (Java convention)
+public class helloWorld { // Class name should match .java file name
     
     // Entry point of the program
     // The JVM starts execution from the main method

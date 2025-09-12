@@ -26,9 +26,9 @@ Büyük harfle başlarlar.
 
 Örnekler:
 
-Integer y = 10;  
-Double d = 3.14;  
-Boolean b = true;
+Integer y = 10; //int  
+Double d = 3.14;  //double
+Boolean b = true; //boolean
 
 Primitive ↔ Wrapper Eşleştirmesi:
 

@@ -1,6 +1,6 @@
 // Type Conversions in Java (Type Casting and Boxing/Unboxing)
 
-public class variableTransform {
+public class VariableTransform {
     public static void main(String[] args) {
         
         // ---- Automatic Conversion (Widening Casting) ----

@@ -1,7 +1,7 @@
 // Operators in Java
 // This example demonstrates how to use arithmetic, comparison, and logical operators.
 
-public class operators {
+public class Operators {
     public static void main(String[] args) {
         int num1 = 8;
         int num2 = 5;

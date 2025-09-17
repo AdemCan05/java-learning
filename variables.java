@@ -11,7 +11,7 @@
    int firstNum = 90;  // ✅ Geçerli ve önerilen kullanım (camelCase)
 */
 
-public class variables {
+public class Variables {
     public static void main(String[] args) {
         
         // Tamsayılar için "int"

@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class ifElseIf {
+public class IfElseIf {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter your age: ");

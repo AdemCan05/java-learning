@@ -1,10 +1,11 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class SesliHarf{
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Bir kelime giriniz: ");
-        String kelime = input.nextLine().toLowerCase();
+        String kelime = input.nextLine().toLowerCase(Locale.forLanguageTag("tr"));
         input.close();
         int sesliHarfSayisi = 0;
         for(char harf : kelime.toCharArray()){
